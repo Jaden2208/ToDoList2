@@ -1,7 +1,7 @@
 {% load static %}
 
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -30,7 +30,8 @@
     </ul>
     <form class="form-inline my-2 my-lg-0" method="POST">
         {% csrf_token %}
-      <input class="form-control mr-sm-2" type="search" placeholder="Add Item" aria-label="Search" name="item">
+      <input class="form-control mr-sm-2" type="search" placeholder="제목" aria-label="Search" name="item">
+      <input class="form-control mr-sm-2" type="search" placeholder="내용" aria-label="Search" name="content">
       <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Add </button>
     </form>
   </div>

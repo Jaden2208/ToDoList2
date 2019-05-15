@@ -10,7 +10,7 @@ def home(request):
         if form.is_valid():
             form.save()
             all_items = List.objects.all
-            messages.success(request, ('Item Has Been Added To List!'))
+            messages.success(request, ('할 일이 추가되었습니다!'))
             return render(request, 'home.html', {'all_items': all_items})
 
     else:
@@ -20,7 +20,7 @@ def home(request):
 def delete(request, list_id):
     item = List.objects.get(pk=list_id)
     item.delete()
-    messages.success(request, ('Item Has Been Deleted!'))
+    messages.success(request, ('할 일이 삭제되었습니다!'))
     return redirect('home')
 
 def cross_off(request, list_id):
